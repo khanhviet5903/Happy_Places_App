@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="sunsetpurple">#A865B5</color>
+    <color name="darkpurple">#6f27b3</color>
+    <color name="secondaryTextColor">#446ccf</color>
+    <color name="primaryTextColor">#5218fa</color>
+    <color name="green">#00A86B</color>
+    <color name="midnightblue">#191970</color>
+    <color name="sapphireblue">#0f52BA</color>
+    <color name="jadegreen">#00A86B</color>
+    <color name="lila">#fa98fc</color>
+    <color name="red">#FF2400</color>
+</resources>

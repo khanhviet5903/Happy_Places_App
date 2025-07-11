@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HappyPlacesApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/sunsetpurple</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+    </style>
+    <style name="CustomTextInputLayoutTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="colorPrimary">@color/jadegreen</item>
+        <item name="colorPrimaryVariant">@color/jadegreen</item>
+        <item name="colorOnPrimary">@color/jadegreen</item>
+    </style>
+
+    <style name="CustomDatePicker" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">@color/sunsetpurple</item>
+    </style>
+
+    <style name="CustomNoActionBarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/sunsetpurple</item>
+        <item name="android:datePickerStyle">@style/CustomDatePicker</item>
+        <item name="colorPrimary">@color/jadegreen</item>
+        <item name="colorSecondary">@color/lila</item>
+    </style>
+
+    <style name="CustomToolBarStyle">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="Theme.HappyPlacesApp" parent="Base.Theme.HappyPlacesApp" />
+</resources>
