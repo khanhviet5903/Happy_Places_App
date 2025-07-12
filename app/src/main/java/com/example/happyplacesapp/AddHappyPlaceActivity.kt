@@ -378,14 +378,11 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
             binding.etLocation.text.isNullOrEmpty() -> {
                 Toast.makeText(this, "Please enter location", Toast.LENGTH_LONG).show()
             }
-            savedImageToInternalStorage == null -> {
-                Toast.makeText(this, "Please select an image", Toast.LENGTH_LONG).show()
-            }
             else -> {
                 val happyPlaceModel = HappyPlaceModel(
                     if (happyPlacesDetails == null) 0 else happyPlacesDetails!!.id,
                     binding.etTitle.text.toString(),
-                    savedImageToInternalStorage.toString(),
+                    savedImageToInternalStorage?.toString(), // Now nullable - image is optional
                     binding.etDescription.text.toString(),
                     binding.etDate.text.toString(),
                     binding.etLocation.text.toString(),
