@@ -146,7 +146,8 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
         binding.etDate.setOnClickListener(this)
         binding.tvAddImage.setOnClickListener(this)
         binding.btnSave.setOnClickListener(this)
-        binding.etLocation.setOnClickListener(this)
+        // Remove the click listener from etLocation to allow manual typing
+        // binding.etLocation.setOnClickListener(this)
         binding.tvSelectCurrentLocation.setOnClickListener(this)
     }
 
@@ -213,6 +214,14 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
 
             binding.btnSave.text = "UPDATE"
         }
+
+        // Ensure EditText fields are enabled and focusable
+        binding.etTitle.isEnabled = true
+        binding.etTitle.isFocusable = true
+        binding.etTitle.isFocusableInTouchMode = true
+        binding.etDescription.isEnabled = true
+        binding.etDescription.isFocusable = true
+        binding.etDescription.isFocusableInTouchMode = true
     }
 
     override fun onClick(view: View?) {
@@ -226,9 +235,10 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
             binding.btnSave.id -> {
                 saveToDB()
             }
-            binding.etLocation.id -> {
-                locationPick()
-            }
+            // Removed etLocation click handler to allow manual typing
+            // binding.etLocation.id -> {
+            //     locationPick()
+            // }
             binding.tvSelectCurrentLocation.id -> {
                 getCurrentLocation()
             }
