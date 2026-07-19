@@ -235,10 +235,9 @@ class AddHappyPlaceActivity : AppCompatActivity(), View.OnClickListener {
             binding.btnSave.id -> {
                 saveToDB()
             }
-            // Removed etLocation click handler to allow manual typing
-            // binding.etLocation.id -> {
-            //     locationPick()
-            // }
+            binding.etLocation.id -> {
+                 locationPick()
+             }
             binding.tvSelectCurrentLocation.id -> {
                 getCurrentLocation()
             }

@@ -84,10 +84,9 @@ class HappyPlaceDetailActivity : AppCompatActivity() {
         val btnViewMap = findViewById<Button>(R.id.btn_viewMap)
         btnViewMap.setOnClickListener {
             happyPlaceDetailModel?.let { model ->
-                // Comment out or remove this if MapActivity doesn't exist yet
-                // val intent = Intent(this, MapActivity::class.java)
-                // intent.putExtra(MainActivity.EXTRA_PLACE_DETAILS, model)
-                // startActivity(intent)
+                val intent = Intent(this, MapActivity::class.java)
+                intent.putExtra(MainActivity.EXTRA_PLACE_DETAILS, model)
+                 startActivity(intent)
             }
         }
     }
